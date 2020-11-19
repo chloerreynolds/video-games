@@ -23,19 +23,19 @@ sales_genre <- games %>%
   group_by(Genre) %>%
   summarize(sales = sum(sales, na.rm = TRUE)) %>%
   arrange(desc(sales))
-write_csv(games, "data/sales_genre.csv", na = "")
+write_csv(sales_genre, "data/sales_genre.csv", na = "")
 
 sales_platform <- games %>%
   group_by(Platform) %>%
   summarize(sales = sum(sales, na.rm = TRUE)) %>%
   arrange(desc(sales))
-write_csv(games, "data/sales_platform.csv", na = "")
+write_csv(sales_platform, "data/sales_platform.csv", na = "")
 
 sales_publisher <- games %>%
   group_by(Publisher) %>%
   summarize(sales = sum(sales, na.rm = TRUE)) %>%
   arrange(desc(sales))
-write_csv(games, "data/sales_publisher.csv", na = "")
+write_csv(sales_publisher, "data/sales_publisher.csv", na = "")
 
 
 
